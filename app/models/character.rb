@@ -6,10 +6,4 @@ class Character < ActiveRecord::Base
         "#{self.name} always says: #{self.catchphrase}"
     end
 
-    def build_show(name: name)
-        show = Show.find_or_create_by(name: name)
-        show.characters << self
-        show
-    end
-
 end
